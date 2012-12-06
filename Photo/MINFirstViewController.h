@@ -10,6 +10,6 @@
 
 @interface MINFirstViewController : UIViewController
 
-- (IBAction)CreateNewButton:(UIButton *)sender;
+- (IBAction)createNewButton:(UIButton *)sender;
 
 @end

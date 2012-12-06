@@ -10,7 +10,13 @@
 
 #import "MINNewClassViewController.h"
 
+#import "Event.h"
+
 @interface MINFirstViewController ()
+
+//only accessible to this class (these properties)
+@property NSMutableArray *events;
+@property MINNewClassViewController *minNewClassVC;
 
 @end
 
@@ -30,6 +36,14 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    _minNewClassVC = [[MINNewClassViewController alloc] init];
+    
+}
+
+-(void)viewDidAppear:(BOOL)animated{
+    _events = [[NSMutableArray alloc] initWithArray:[Event findAll]];
+    NSLog(@"%@",_events);
 }
 
 - (void)didReceiveMemoryWarning
@@ -38,7 +52,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)CreateNewButton:(UIButton *)sender {
+- (IBAction)createNewButton:(UIButton *)sender {
     MINNewClassViewController *newClassViewController = [[MINNewClassViewController alloc] initWithNibName:@"MINNewClassViewController" bundle:nil];
     [self presentViewController:newClassViewController animated:YES completion:nil];
     

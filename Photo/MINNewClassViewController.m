@@ -7,6 +7,7 @@
 //
 
 #import "MINNewClassViewController.h"
+#import "Event.h"
 
 @interface MINNewClassViewController ()
 
@@ -27,6 +28,12 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    [_eventname setDelegate:self];
+    [_passwordname setDelegate:self];
+    
+    
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -35,13 +42,32 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)BackToFIrst:(UIButton *)sender {
+- (IBAction)backToFIrst:(UIButton *)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
-
-}
-
-- (IBAction)CreateEvent:(UIButton *)sender {
-    
     
 }
+
+- (IBAction)createEvent:(UIButton *)sender {
+    NSLog(@"%@ create event called", _eventname.text);
+    
+    //used for core data
+    Event *event = [Event createEntity];
+    event.name = _eventname.text;
+    
+    [[NSManagedObjectContext defaultContext] save];
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+
+//because this is BOOL, need return Yes;
+-(BOOL) textFieldShouldReturn:(UITextField *)textField{
+    [_passwordname resignFirstResponder];
+    [_eventname resignFirstResponder];
+    
+    return YES;
+    
+}
+
+
 @end

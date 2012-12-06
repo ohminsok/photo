@@ -19,7 +19,8 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         self.title = NSLocalizedString(@"Me", @"Me");
-        self.tabBarItem.image = [UIImage imageNamed:@"second"];
+        //image size must be 30x30 or less
+        self.tabBarItem.image = [UIImage imageNamed:@"1.png"];
     }
     return self;
 }

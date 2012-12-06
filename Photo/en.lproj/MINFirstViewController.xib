@@ -76,7 +76,7 @@
 					<object class="IBUITableView" id="1010752972">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">274</int>
-						<string key="NSFrame">{{0, 20}, {320, 426}}</string>
+						<string key="NSFrame">{{0, 20}, {320, 323}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
@@ -95,7 +95,6 @@
 				<string key="NSFrame">{{0, 20}, {320, 499}}</string>
 				<reference key="NSSuperview"/>
 				<reference key="NSWindow"/>
-				<reference key="NSNextKeyView"/>
 				<reference key="IBUIBackgroundColor" ref="824479566"/>
 				<object class="IBUISimulatedStatusBarMetrics" key="IBUISimulatedStatusBarMetrics"/>
 				<object class="IBUISimulatedTabBarMetrics" key="IBUISimulatedBottomBarMetrics"/>
@@ -131,12 +130,12 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
-						<string key="label">CreateNewButton:</string>
+						<string key="label">createNewButton:</string>
 						<reference key="source" ref="300868540"/>
 						<reference key="destination" ref="372490531"/>
 						<int key="IBEventType">7</int>
 					</object>
-					<int key="connectionID">25</int>
+					<int key="connectionID">42</int>
 				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -288,7 +287,7 @@
 						<int key="objectID">33</int>
 						<reference key="object" ref="1010752972"/>
 						<array class="NSMutableArray" key="children">
-							<object class="IBNSLayoutConstraint" id="966754517">
+							<object class="IBNSLayoutConstraint" id="846741350">
 								<reference key="firstItem" ref="1010752972"/>
 								<int key="firstAttribute">8</int>
 								<int key="relation">0</int>
@@ -296,7 +295,7 @@
 								<int key="secondAttribute">0</int>
 								<float key="multiplier">1</float>
 								<object class="IBLayoutConstant" key="constant">
-									<double key="value">426</double>
+									<double key="value">323</double>
 								</object>
 								<float key="priority">1000</float>
 								<reference key="containingView" ref="1010752972"/>
@@ -323,8 +322,8 @@
 						<reference key="parent" ref="191373211"/>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">40</int>
-						<reference key="object" ref="966754517"/>
+						<int key="objectID">41</int>
+						<reference key="object" ref="846741350"/>
 						<reference key="parent" ref="1010752972"/>
 					</object>
 				</array>
@@ -349,20 +348,20 @@
 				<string key="23.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="24.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="33.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-				<array key="33.IBViewMetadataConstraints">
-					<reference ref="966754517"/>
+				<array class="NSMutableArray" key="33.IBViewMetadataConstraints">
+					<reference ref="846741350"/>
 				</array>
 				<boolean value="NO" key="33.IBViewMetadataTranslatesAutoresizingMaskIntoConstraints"/>
 				<string key="34.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="35.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="39.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-				<string key="40.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+				<string key="41.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 			</dictionary>
 			<dictionary class="NSMutableDictionary" key="unlocalizedProperties"/>
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">40</int>
+			<int key="maxID">42</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -370,13 +369,13 @@
 					<string key="className">MINFirstViewController</string>
 					<string key="superclassName">UIViewController</string>
 					<object class="NSMutableDictionary" key="actions">
-						<string key="NS.key.0">CreateNewButton:</string>
+						<string key="NS.key.0">createNewButton:</string>
 						<string key="NS.object.0">UIButton</string>
 					</object>
 					<object class="NSMutableDictionary" key="actionInfosByName">
-						<string key="NS.key.0">CreateNewButton:</string>
+						<string key="NS.key.0">createNewButton:</string>
 						<object class="IBActionInfo" key="NS.object.0">
-							<string key="name">CreateNewButton:</string>
+							<string key="name">createNewButton:</string>
 							<string key="candidateClassName">UIButton</string>
 						</object>
 					</object>

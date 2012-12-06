@@ -10,8 +10,17 @@
 
 @interface MINNewClassViewController : UIViewController
 
-- (IBAction)BackToFIrst:(UIButton *)sender;
+<UITextFieldDelegate>
 
-- (IBAction)CreateEvent:(UIButton *)sender;
+//when entering new outlet, need to go to .m view and add setdelegate self
+//setting up these properties allows the keyboard to go away
+@property (strong, nonatomic) IBOutlet UITextField *eventname;
+@property (strong, nonatomic) IBOutlet UITextField *passwordname;
+@property (strong, nonatomic) NSString *eventNameProperty;
+
+- (IBAction)backToFIrst:(UIButton *)sender;
+
+- (IBAction)createEvent:(UIButton *)sender;
+
 
 @end
