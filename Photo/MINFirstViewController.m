@@ -36,14 +36,14 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    
-    _minNewClassVC = [[MINNewClassViewController alloc] init];
-    
+
 }
 
 -(void)viewDidAppear:(BOOL)animated{
     _events = [[NSMutableArray alloc] initWithArray:[Event findAll]];
-    NSLog(@"%@",_events);
+    NSLog(@"events %@",[[_events objectAtIndex:0]name]);
+    [_eventTableView reloadData];
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -57,4 +57,52 @@
     [self presentViewController:newClassViewController animated:YES completion:nil];
     
 }
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return [_events count];
+}
+
+#pragma mark - Test Pragma
+//setup the tableView's cells.
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    static NSString *Cellidentifier = @"Cell";
+    
+    UITableViewCell *cell = (UITableViewCell *) [tableView dequeueReusableCellWithIdentifier:Cellidentifier];
+    
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:Cellidentifier];
+    }
+    cell.contentView.backgroundColor = [UIColor whiteColor];
+    cell.textLabel.textColor = [UIColor blackColor];
+    cell.textLabel.text = [[_events objectAtIndex:indexPath.row] name];
+    
+    return cell;
+}
+
+-(void)tableView:(UITableView *)tableView
+commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    //If the table view is asking to commit a delete command
+    if (editingStyle == UITableViewCellEditingStyleDelete)
+    {
+        Event *event = [_events objectAtIndex:indexPath.row];
+        [event deleteEntity];
+        [_events removeObjectAtIndex:indexPath.row];
+        [[NSManagedObjectContext defaultContext] save];
+        [_eventTableView reloadData];
+    }
+}
+
+//implement this method to allow users to tap on rows
+//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//
+//}
+
 @end

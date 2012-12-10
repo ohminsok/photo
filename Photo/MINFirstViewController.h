@@ -8,7 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MINFirstViewController : UIViewController
+@interface MINFirstViewController : UIViewController<UITableViewDelegate, UITableViewDataSource>
+
+@property (strong, nonatomic) IBOutlet UITableView *eventTableView;
+
 
 - (IBAction)createNewButton:(UIButton *)sender;
 
