@@ -32,6 +32,11 @@
 		045DF1411667363000F1B7AB /* MINThirdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 045DF13F1667363000F1B7AB /* MINThirdViewController.xib */; };
 		045DF14916673B8400F1B7AB /* MINNewClassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 045DF14716673B8400F1B7AB /* MINNewClassViewController.m */; };
 		045DF14A16673B8400F1B7AB /* MINNewClassViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 045DF14816673B8400F1B7AB /* MINNewClassViewController.xib */; };
+		04A86FB3167A5A4A007AD35F /* MINEventPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A86FB1167A5A4A007AD35F /* MINEventPhotoViewController.m */; };
+		04A86FB4167A5A4A007AD35F /* MINEventPhotoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04A86FB2167A5A4A007AD35F /* MINEventPhotoViewController.xib */; };
+		04A86FB9167A61A9007AD35F /* MINYourPhotosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A86FB7167A61A9007AD35F /* MINYourPhotosViewController.m */; };
+		04A86FBA167A61A9007AD35F /* MINYourPhotosViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04A86FB8167A61A9007AD35F /* MINYourPhotosViewController.xib */; };
+		04A86FBC167A6203007AD35F /* screen5.png in Resources */ = {isa = PBXBuildFile; fileRef = 04A86FBB167A6203007AD35F /* screen5.png */; };
 		C4CCE1F716742180008CA27A /* MagicalImportFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = C4CCE1BF16742180008CA27A /* MagicalImportFunctions.m */; };
 		C4CCE1F816742180008CA27A /* NSAttributeDescription+MagicalDataImport.m in Sources */ = {isa = PBXBuildFile; fileRef = C4CCE1C116742180008CA27A /* NSAttributeDescription+MagicalDataImport.m */; };
 		C4CCE1F916742180008CA27A /* NSEntityDescription+MagicalDataImport.m in Sources */ = {isa = PBXBuildFile; fileRef = C4CCE1C316742180008CA27A /* NSEntityDescription+MagicalDataImport.m */; };
@@ -95,6 +100,13 @@
 		045DF14616673B8400F1B7AB /* MINNewClassViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MINNewClassViewController.h; sourceTree = "<group>"; };
 		045DF14716673B8400F1B7AB /* MINNewClassViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MINNewClassViewController.m; sourceTree = "<group>"; };
 		045DF14816673B8400F1B7AB /* MINNewClassViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MINNewClassViewController.xib; sourceTree = "<group>"; };
+		04A86FB0167A5A49007AD35F /* MINEventPhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MINEventPhotoViewController.h; sourceTree = "<group>"; };
+		04A86FB1167A5A4A007AD35F /* MINEventPhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MINEventPhotoViewController.m; sourceTree = "<group>"; };
+		04A86FB2167A5A4A007AD35F /* MINEventPhotoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MINEventPhotoViewController.xib; sourceTree = "<group>"; };
+		04A86FB6167A61A9007AD35F /* MINYourPhotosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MINYourPhotosViewController.h; sourceTree = "<group>"; };
+		04A86FB7167A61A9007AD35F /* MINYourPhotosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MINYourPhotosViewController.m; sourceTree = "<group>"; };
+		04A86FB8167A61A9007AD35F /* MINYourPhotosViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MINYourPhotosViewController.xib; sourceTree = "<group>"; };
+		04A86FBB167A6203007AD35F /* screen5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screen5.png; sourceTree = "<group>"; };
 		C4CCE1BE16742180008CA27A /* MagicalImportFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MagicalImportFunctions.h; sourceTree = "<group>"; };
 		C4CCE1BF16742180008CA27A /* MagicalImportFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MagicalImportFunctions.m; sourceTree = "<group>"; };
 		C4CCE1C016742180008CA27A /* NSAttributeDescription+MagicalDataImport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributeDescription+MagicalDataImport.h"; sourceTree = "<group>"; };
@@ -215,6 +227,12 @@
 				045DF14616673B8400F1B7AB /* MINNewClassViewController.h */,
 				045DF14716673B8400F1B7AB /* MINNewClassViewController.m */,
 				045DF14816673B8400F1B7AB /* MINNewClassViewController.xib */,
+				04A86FB0167A5A49007AD35F /* MINEventPhotoViewController.h */,
+				04A86FB1167A5A4A007AD35F /* MINEventPhotoViewController.m */,
+				04A86FB2167A5A4A007AD35F /* MINEventPhotoViewController.xib */,
+				04A86FB6167A61A9007AD35F /* MINYourPhotosViewController.h */,
+				04A86FB7167A61A9007AD35F /* MINYourPhotosViewController.m */,
+				04A86FB8167A61A9007AD35F /* MINYourPhotosViewController.xib */,
 				045DF14B1669726000F1B7AB /* Model */,
 				045DF1131667361100F1B7AB /* Supporting Files */,
 			);
@@ -225,6 +243,7 @@
 			isa = PBXGroup;
 			children = (
 				0426665B16700CB70059550E /* 1.png */,
+				04A86FBB167A6203007AD35F /* screen5.png */,
 				C4CCE1BB16742180008CA27A /* MagicalRecord */,
 				045DF1141667361100F1B7AB /* Photo-Info.plist */,
 				045DF1151667361100F1B7AB /* InfoPlist.strings */,
@@ -413,6 +432,9 @@
 				045DF1411667363000F1B7AB /* MINThirdViewController.xib in Resources */,
 				045DF14A16673B8400F1B7AB /* MINNewClassViewController.xib in Resources */,
 				0426665C16700CB70059550E /* 1.png in Resources */,
+				04A86FB4167A5A4A007AD35F /* MINEventPhotoViewController.xib in Resources */,
+				04A86FBA167A61A9007AD35F /* MINYourPhotosViewController.xib in Resources */,
+				04A86FBC167A6203007AD35F /* screen5.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,6 +479,8 @@
 				C4CCE20E16742180008CA27A /* MagicalRecord+Setup.m in Sources */,
 				C4CCE20F16742180008CA27A /* MagicalRecord+ShorthandSupport.m in Sources */,
 				C4CCE21016742180008CA27A /* MagicalRecord.m in Sources */,
+				04A86FB3167A5A4A007AD35F /* MINEventPhotoViewController.m in Sources */,
+				04A86FB9167A61A9007AD35F /* MINYourPhotosViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
