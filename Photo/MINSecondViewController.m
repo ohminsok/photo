@@ -39,6 +39,11 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    _photoAlbum.delegate = self;
+    [_photoAlbum setDelegate:self];
+    _photoAlbum.dataSource = self;
+    [_photoAlbum setDataSource:self];
 }
 
 - (void)didReceiveMemoryWarning
@@ -104,9 +109,15 @@
 {
     image = [info objectForKey:UIImagePickerControllerEditedImage];
     
-    if ([self isViewLoaded]) {
-        [self showImage:image];
+//    if ([self isViewLoaded]) {
+//        [self showImage:image];
+//    }
+    
+    if(!_images){
+    _images = [[NSMutableArray alloc ] init];
     }
+    
+    [_images addObject:image];
     
     [self dismissViewControllerAnimated:YES completion:nil];
     imagePicker = nil;
@@ -129,5 +140,43 @@
     }
     actionSheet = nil;
 }
+
+- (void)viewDidUnload {
+    [self setPhotoAlbum:nil];
+    [self setCellImageView:nil];
+    [self setCellLabel:nil];
+    [super viewDidUnload];
+}
+
+#pragma mark - UITableViewDelegate
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    static NSString *Cellidentifier = @"tableViewCell";
+    
+    UITableViewCell *cell = (UITableViewCell *) [tableView dequeueReusableCellWithIdentifier:Cellidentifier];
+    
+    if (cell == nil) {
+        
+        [[NSBundle mainBundle] loadNibNamed:@"tableViewCell" owner:self options:nil];
+        
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:Cellidentifier];
+    }
+    
+    cell.contentView.backgroundColor = [UIColor redColor];
+    cell.textLabel.textColor = [UIColor blackColor];
+    
+    return cell;
+}
+
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 1;
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 111;
+}
+
 
 @end

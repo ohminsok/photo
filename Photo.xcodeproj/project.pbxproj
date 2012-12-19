@@ -11,6 +11,7 @@
 		0426665F16701DDD0059550E /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0426665D16701DDD0059550E /* Model.xcdatamodeld */; };
 		0426666216701EF20059550E /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 0426666116701EF20059550E /* Event.m */; };
 		042666BA167021F20059550E /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 042666B9167021F20059550E /* CoreData.framework */; };
+		043C2205168284D800DC99A9 /* tableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 043C2204168284D800DC99A9 /* tableViewCell.xib */; };
 		045DF10D1667361100F1B7AB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 045DF10C1667361100F1B7AB /* UIKit.framework */; };
 		045DF10F1667361100F1B7AB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 045DF10E1667361100F1B7AB /* Foundation.framework */; };
 		045DF1111667361100F1B7AB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 045DF1101667361100F1B7AB /* CoreGraphics.framework */; };
@@ -71,6 +72,7 @@
 		0426666016701EF20059550E /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
 		0426666116701EF20059550E /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Event.m; sourceTree = "<group>"; };
 		042666B9167021F20059550E /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		043C2204168284D800DC99A9 /* tableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = tableViewCell.xib; sourceTree = "<group>"; };
 		045DF1081667361100F1B7AB /* Photo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Photo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		045DF10C1667361100F1B7AB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		045DF10E1667361100F1B7AB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -233,6 +235,7 @@
 				04A86FB6167A61A9007AD35F /* MINYourPhotosViewController.h */,
 				04A86FB7167A61A9007AD35F /* MINYourPhotosViewController.m */,
 				04A86FB8167A61A9007AD35F /* MINYourPhotosViewController.xib */,
+				043C2204168284D800DC99A9 /* tableViewCell.xib */,
 				045DF14B1669726000F1B7AB /* Model */,
 				045DF1131667361100F1B7AB /* Supporting Files */,
 			);
@@ -435,6 +438,7 @@
 				04A86FB4167A5A4A007AD35F /* MINEventPhotoViewController.xib in Resources */,
 				04A86FBA167A61A9007AD35F /* MINYourPhotosViewController.xib in Resources */,
 				04A86FBC167A6203007AD35F /* screen5.png in Resources */,
+				043C2205168284D800DC99A9 /* tableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
