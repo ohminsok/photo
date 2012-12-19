@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MINSecondViewController : UIViewController
+@interface MINSecondViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIActionSheetDelegate>
+
+- (IBAction)choosePhoto:(UIButton *)sender;
+
+@property (nonatomic, strong) IBOutlet UIImageView *imageView;
+//@property (nonatomic, weak) UIImagePickerController *imagePicker;
+
+
 
 @end

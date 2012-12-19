@@ -41,7 +41,6 @@
 
 -(void)viewDidAppear:(BOOL)animated{
     _events = [[NSMutableArray alloc] initWithArray:[Event findAll]];
-    NSLog(@"events %@",[[_events objectAtIndex:0]name]);
     [_eventTableView reloadData];
 
 }

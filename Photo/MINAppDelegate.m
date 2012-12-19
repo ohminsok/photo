@@ -7,11 +7,8 @@
 //
 
 #import "MINAppDelegate.h"
-
 #import "MINFirstViewController.h"
-
 #import "MINSecondViewController.h"
-
 #import "MINThirdViewController.h"
 
 @implementation MINAppDelegate
