@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MINYourPhotosViewController : UIViewController
+@interface MINYourPhotosViewController : UIViewController<UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIActionSheetDelegate>
+
+- (IBAction)choosePhoto:(UIButton *)sender;
+- (IBAction)backButtonPressed:(UIButton *)sender;
+
+@property (nonatomic, strong) IBOutlet UIImageView *imageView;
+
+
 
 @end

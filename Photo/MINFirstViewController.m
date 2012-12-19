@@ -43,10 +43,7 @@
 
 -(void)viewDidAppear:(BOOL)animated{
     _events = [[NSMutableArray alloc] initWithArray:[Event findAll]];
-<<<<<<< HEAD
-=======
-    
->>>>>>> ad95f6832c5e6e7f61c92b2bc2de853673da9c1c
+
     [_eventTableView reloadData];
 
 }

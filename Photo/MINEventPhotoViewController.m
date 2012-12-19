@@ -7,6 +7,7 @@
 //
 
 #import "MINEventPhotoViewController.h"
+#import "MINYourPhotosViewController.h"
 
 @interface MINEventPhotoViewController ()
 
@@ -36,10 +37,14 @@
 }
 
 - (IBAction)uploadPhoto:(UIButton *)sender {
+    
+    MINYourPhotosViewController *photoVC = [[MINYourPhotosViewController alloc] initWithNibName:@"MINYourPhotosViewController" bundle:nil];
+    [self presentViewController:photoVC animated:YES completion:nil];
+    
 }
 
 - (IBAction)backToEvent:(UIButton *)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
-    }
+}
 
 @end

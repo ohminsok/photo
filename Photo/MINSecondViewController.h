@@ -13,7 +13,6 @@
 - (IBAction)choosePhoto:(UIButton *)sender;
 
 @property (nonatomic, strong) IBOutlet UIImageView *imageView;
-//@property (nonatomic, weak) UIImagePickerController *imagePicker;
 
 
 
