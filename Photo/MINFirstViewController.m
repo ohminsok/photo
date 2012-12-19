@@ -12,6 +12,8 @@
 
 #import "Event.h"
 
+#import "MINEventPhotoViewController.h"
+
 @interface MINFirstViewController ()
 
 //only accessible to this class (these properties)
@@ -41,6 +43,10 @@
 
 -(void)viewDidAppear:(BOOL)animated{
     _events = [[NSMutableArray alloc] initWithArray:[Event findAll]];
+<<<<<<< HEAD
+=======
+    
+>>>>>>> ad95f6832c5e6e7f61c92b2bc2de853673da9c1c
     [_eventTableView reloadData];
 
 }
@@ -96,10 +102,37 @@ commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(
         [[NSManagedObjectContext defaultContext] save];
         [_eventTableView reloadData];
     }
+
+
 }
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    //select row - take to another screen
+    MINEventPhotoViewController *eventPhotoViewController = [[MINEventPhotoViewController alloc] initWithNibName:@"MINEventPhotoViewController" bundle:nil];
+    [self presentViewController:eventPhotoViewController animated:YES completion:nil];
+    
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
+    //headers in table
+    if (section == 0){
+        return @"header 1";
+    } else if (section == 1) {
+        return @"header 2";
+    }
+    return nil;
+}
+
+
+
 
 //implement this method to allow users to tap on rows
 //- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//
+//}
+
+//- (void)deleteRowsAtIndexPaths:(NSArray *)event withRowAnimation:(UITableViewRowAnimation)UITableViewRowAnimationLeft
 //{
 //
 //}
