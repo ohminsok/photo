@@ -12,7 +12,6 @@
 
 - (void)showPhotoMenu;
 
-
 @end
 
 @implementation MINSecondViewController{
@@ -21,8 +20,6 @@
     UIImagePickerController *imagePicker;
 }
 
-
-
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -30,8 +27,6 @@
         self.title = NSLocalizedString(@"My Pics", @"My Pics");
         self.tabBarItem.image = [UIImage imageNamed:@"second"];
     }
-    
-
     return self;
 }
 							
@@ -46,12 +41,16 @@
     [_photoAlbum setDataSource:self];
 }
 
+-(void)viewDidAppear:(BOOL)animated{
+    NSLog(@"images contains an image ? %@",_images);
+    [_photoAlbum reloadData];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
 
 - (void)showPhotoMenu
 {
@@ -63,9 +62,7 @@
                        cancelButtonTitle:@"Cancel"
                        destructiveButtonTitle:nil
                        otherButtonTitles:@"Take Photo", @"Choose From Library", nil];
-        
         NSLog(@"action sheet object? %@",actionSheet);
-        
         [actionSheet showInView:self.view];
     } else {
         [self choosePhotoFromLibrary];
@@ -75,7 +72,6 @@
 - (IBAction)choosePhoto:(UIButton *)sender{
     [self showPhotoMenu];
 }
-
 
 - (void)takePhoto
 {
@@ -108,10 +104,6 @@
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
     image = [info objectForKey:UIImagePickerControllerEditedImage];
-    
-//    if ([self isViewLoaded]) {
-//        [self showImage:image];
-//    }
     
     if(!_images){
     _images = [[NSMutableArray alloc ] init];
@@ -151,32 +143,42 @@
 #pragma mark - UITableViewDelegate
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *Cellidentifier = @"tableViewCell";
-    
-    UITableViewCell *cell = (UITableViewCell *) [tableView dequeueReusableCellWithIdentifier:Cellidentifier];
-    
+    static NSString *CellIdentifier = @"tableViewCell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        
         [[NSBundle mainBundle] loadNibNamed:@"tableViewCell" owner:self options:nil];
-        
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:Cellidentifier];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
+        cell = _customCell;
+        self.customCell = nil;
+        }
+
+    UIImageView *cellPhoto = (UIImageView *) [cell viewWithTag:1];
+    if (_images){
+
+        cellPhoto.image = [_images objectAtIndex:indexPath.row];
+    }
+    else{
+    cellPhoto.backgroundColor = [UIColor cyanColor];
     }
     
-    cell.contentView.backgroundColor = [UIColor redColor];
-    cell.textLabel.textColor = [UIColor blackColor];
-    
+    UILabel *photoLabel = (UILabel *) [cell viewWithTag:2];
+    photoLabel.text = [NSString stringWithFormat:@"Photo %d", indexPath.row + 1];
+
     return cell;
 }
 
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    
+    if (_images){
+        return _images.count;
+    }
+    else{
     return 1;
+    }
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 111;
 }
-
 
 @end
